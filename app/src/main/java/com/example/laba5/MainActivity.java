@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
-        // Загрузить сохраненный текст при запуске приложения
+        // Если расскоментить, логика поменяется -  при запуске приложения, автоматически будет загружаться последнее сохраненный текст
+        // Иначе, загружать будет только по нажатии кнопки "Загрузить"
         loadText();
 
         saveButton.setOnClickListener(new View.OnClickListener() {

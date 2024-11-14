@@ -3,32 +3,44 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/fon"
                 tools:context=".MainActivity">
 
     <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_margin="16dp"
-            android:hint="Введите текст" />
+            android:hint="Введите текст"
+            android:background="#4D4D4D"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="16dp"
+            android:layout_alignParentTop="false" />
 
-    <Button
-            android:id="@+id/saveButton"
+    <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editText"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Сохранить" />
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
 
-    <Button
-            android:id="@+id/loadButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_toEndOf="@id/saveButton"
-            android:text="Загрузить" />
+        <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:layout_marginEnd="8dp"/>
+
+        <Button
+                android:id="@+id/loadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Загрузить"
+                android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
